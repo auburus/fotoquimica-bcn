@@ -1,0 +1,3 @@
+[submodule "themes/basetheme"]
+	path = themes/basetheme
+	url = https://github.com/humboldtux/startbootstrap-clean-blog
