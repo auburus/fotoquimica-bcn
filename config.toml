@@ -1,3 +1,7 @@
 baseURL = "localhost"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Fotoquimica Bcn"
+# copyright = "© 2018 Fotoquimica Bcn All Rights Reserved"
+copyRight = "mufasa"
+
+# theme = "test"

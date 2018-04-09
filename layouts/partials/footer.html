@@ -1,0 +1,33 @@
+<style>
+  /* Make footer sticky
+     TODO Move that to scss
+  */
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+</style>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col 15 sl12">
+        <h5 class="white-text">Footer title</h5>
+        <p class="grey-text text-lighten-4 ">I am very proud of this footer</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+<script>
+  M.Sidenav.init(document.querySelector(".sidenav", {}));
+</script>
