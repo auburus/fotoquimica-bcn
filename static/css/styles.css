@@ -6514,6 +6514,3 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
     bottom: auto;
     text-align: center;
     margin-top: 1.2rem; } }
-
-html, body {
-  font-size: 30px; }

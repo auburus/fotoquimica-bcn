@@ -1,0 +1,23 @@
+{{ define "main" }}
+  <style>
+    .publication-item {
+      margin: 3rem 0;
+    }
+    .publication-item span {
+      line-height: 40px;
+      margin-right: 25px;
+    }
+    
+    .publication-item i {
+      vertical-align: middle;
+    }
+  </style>
+  <div class = "container">
+    <div class="row">
+      {{ .Content }}
+    </div>
+    {{ range $.Site.Data.publications.publications }}
+      {{ partial "publication-list-item.html" . }}
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,0 +1,20 @@
+
+<div class="row publication-item">
+  <a href="{{ .link }}"><h6>{{ .title }}</h6></a>
+  <span>
+    <i class="material-icons">people</i>&nbsp;
+      {{ range $index, $author := .authors }}
+        {{ if (eq $index (sub (len $.authors) 1)) }}
+          {{ . }}
+        {{ else }}
+          {{ . }},
+        {{ end }}
+      {{ end }}
+  </span>
+  <span>
+    <i class="material-icons">date_range</i>&nbsp;{{ .date }}
+  </span>
+  <span>
+    <i class="material-icons">description</i>&nbsp;{{ .journal }}
+  </span>
+</div>

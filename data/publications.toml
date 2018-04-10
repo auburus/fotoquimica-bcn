@@ -1,0 +1,21 @@
+[[publications]]
+  date = "1992/5"
+  journal = "The Journal of Physical Chemistry"
+  authors = [
+    "Santiago Nonell",
+    "James W Arbogast",
+    "Christopher S Foote"
+  ]
+  title = "Production of fullerene (C60) radical cation by photosensitized electron transfer"
+  link = "http://pubs.acs.org/doi/pdf/10.1021/j100190a015"
+
+[[publications]]
+  date = "2000/1"
+  journal = "Methods in enzymology"
+  authors = [
+    "Santi Nonell",
+    "Silvia E Braslavsky"
+  ]
+  title = "[4] Time-resolved singlet oxygen detection"
+  link = "https://www.sciencedirect.com/science/article/pii/S0076687900190068"
+
