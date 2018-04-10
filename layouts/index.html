@@ -1,7 +1,26 @@
 {{ define "main" }}
+<div class="carousel carousel-slider" style="max-height: 70vh">
+  <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
+  <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
+  <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
+  <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+</div>
   <div class="container">
     {{ with .Content }}
       {{ . }}
     {{ end }}
   </div>
+
+  <script>
+    window.onload = function () {
+      var carousel = M.Carousel.init(document.querySelector(".carousel"), {
+        duration: 1000,
+        fullWidth: true
+      });
+
+      setInterval(function() {
+        carousel.next();
+      }, 8000);
+    };
+  </script>
 {{ end }}
