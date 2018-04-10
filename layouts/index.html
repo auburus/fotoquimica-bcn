@@ -1,7 +1,7 @@
 {{ define "main" }}
-  {{ with .Content }}
-    <div style="background-color:#b0b0b0;">
+  <div class="container">
+    {{ with .Content }}
       {{ . }}
-    </div>
-  {{ end }}
+    {{ end }}
+  </div>
 {{ end }}
