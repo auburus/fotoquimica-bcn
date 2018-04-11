@@ -1,14 +1,21 @@
 {{ define "main" }}
+<style>
+  strong { font-weight: bold; }
+</style>
 <div class="carousel carousel-slider" style="max-height: 70vh">
-  <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
-  <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-  <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-  <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+  <a class="carousel-item" href="#"><img src="{{ "img/technics_1.jpg" | relURL }}"></a>
+  <a class="carousel-item" href="#"><img src="{{ "img/technics_2.jpg" | relURL }}"></a>
 </div>
   <div class="container">
-    {{ with .Content }}
-      {{ . }}
-    {{ end }}
+    <article>
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+    <section>
+      {{ range last 10 .Site.Pages }}
+        {{ .Render "summary" }}
+      {{ end }}
+    </section>
   </div>
 
   <script>
