@@ -7,14 +7,26 @@
   <a class="carousel-item" href="#"><img src="{{ "img/technics_2.jpg" | relURL }}"></a>
 </div>
   <div class="container">
-    <article>
-      <h1>{{ .Title }}</h1>
+    <article style="padding-top:3rem;">
       {{ .Content }}
     </article>
-    <section>
-      {{ range last 10 .Site.Pages }}
-        {{ .Render "summary" }}
-      {{ end }}
+    <section style="padding-top:3rem;">
+      <h3>Last blog entries</h3>
+      <ul class="collection">
+        {{ $paginator := .Paginate (where .Data.Pages "Type" "post") 3 }}
+        {{ range $paginator.Pages }}
+          <li class="collection-item">
+            <a href="{{ .RelPermalink}}">
+              <h4>{{ .Title }}</h4>
+            </a>
+            <span class="grey-text text-darken-3">{{ .Date.Format "Jan 1, 2006" }}</span>
+            <p>{{ .Summary }}</p>
+          </li>
+        {{ end }}
+      </ul>
+      <div class="right">
+        <a href="{{ "/news" | relURL }}">Show older entries</a>
+      </div>
     </section>
   </div>
 

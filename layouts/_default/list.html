@@ -1,3 +1,16 @@
 {{ define "main" }}
-  {{ .Content }}
+  <div class="container">
+    {{ .Title }}
+    <ul class="collection">
+      {{ range .Paginator.Pages }}
+        <li class="collection-item">
+          <a href="{{ .RelPermalink }}">
+            <h4>{{ .Title }}</h4>
+          </a>
+          <span class="grey-text text-darken-3">{{ .Date.Format "Jan 1, 2006" }}</span>
+          <p>{{ .Summary }}</p>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}

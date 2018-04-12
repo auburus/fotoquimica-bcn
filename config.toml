@@ -2,3 +2,6 @@ baseURL = "localhost"
 languageCode = "en-us"
 title = "Fotoquimica Bcn"
 copyright = "© 2018 Fotoquimica Bcn - All rights reserved"
+
+[permalinks]
+  pages = "/:slug/"
