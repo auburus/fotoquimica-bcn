@@ -3,7 +3,13 @@
     <h3>{{ .Title }}</h3>
     <div class="row">
       <div class="col s6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.6669271784817!2d2.118056615426268!3d41.40303917926277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49838c76a6f19%3A0x8a624cba8fbb33ec!2s!5e0!3m2!1sen!2sus!4v1523492874786" width="400" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe
+             width="100%"
+             height="300px"
+             frameborder="0"
+             style="border:0;"
+             src="https://www.google.com/maps/embed/v1/place?center={{ .Site.Params.contact_map.latitude}},{{ .Site.Params.contact_map.longitude }}&zoom=15&q={{ .Site.Params.contact_map.q }}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+           </iframe>
       </div>
       <div class="col s6">
         {{ .Content }}

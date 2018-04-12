@@ -5,3 +5,9 @@ copyright = "© 2018 Fotoquimica Bcn - All rights reserved"
 
 [permalinks]
   pages = "/:slug/"
+
+[params]
+  [params.contact_map]
+    q = "Via Augusta, 390, 08017 Barcelona, Spain"
+    latitude = "41.403152803467286"
+    longitude = "2.119967097622748"
